@@ -204,6 +204,11 @@ li a{
   font-size: 30px;
   margin-top: 15px;
 }
+.row img{
+  width: 200px;
+  height: 200px;
+  justify-content: flex-start;
+}
 
 
 /* SEZIONE RIPRODUZIONE */
