@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Balsamiq Sans', cursive;
+
 }
 
 #container{
@@ -11,9 +12,6 @@
   height: 100vh;
   position: relative;
   z-index: 0;
-}
-.container{
-  display: flex;
 }
 
                          /* SEZIONE COLONNA */
@@ -48,6 +46,7 @@
 }
 .home:hover{
   color :white;
+    cursor: grab;
 }
                         /* cerca */
 .cerca
@@ -62,6 +61,7 @@
 }
 .cerca:hover{
   color :white;
+    cursor: grab;
 }
                        /* libreria */
 .libreria{
@@ -75,6 +75,7 @@
 }
 .libreria:hover{
   color :white;
+    cursor: grab;
 }
                         /* playlist */
 .playlist{
@@ -95,30 +96,29 @@
   font-size: 30px;
   margin-top: 15px;
   padding-right: 10px;
-
+  color: white;
 }
-.playlist:hover{
+.playlist p:hover{
   color :white;
+    cursor: grab;
 }
 p{
   text-align: center;
   margin-bottom: 20px;
 }
-li{
+                      /* nomeplaylist */
+.nomeplaylist{
+  height: calc(100vh - 170px) ;
+}
+.nomeplaylist li{
   list-style: none;
   margin-top: 10px;
   padding-top: 5px;
 }
 li:hover{
   color: white;
+  cursor: grab;
 }
-.nomeplaylist{
-  height: calc(100vh - 170px) ;
-}
-
-
-                      /* nomeplaylist */
-
                      /* menu-footer */
 .menu-footer{
   width: 200px;
@@ -139,6 +139,7 @@ li:hover{
  .centrale{
    width: 100%;
    height: calc(100vh - 90px);
+   overflow-x: hidden;
  }
                     /* SEZIONE UPGRADE */
 .top{
@@ -164,6 +165,7 @@ li:hover{
   margin: 5px;
   padding: 18px;
   line-height: 0px;
+  cursor: grab;
 }
                   /* SEZIONE PRINCIPALE */
 
@@ -182,6 +184,9 @@ ul{
 }
 li{
   display: inline-block;
+  list-style: none;
+  margin-top: 10px;
+  padding-top: 5px;
   margin-right: 20px;
   font-size: 1em;
 }
@@ -203,21 +208,128 @@ li a{
   font-weight: bolder;
   font-size: 30px;
   margin-top: 15px;
+  margin-left: 10px;
+}
+.rec-img{
+  color: white;
+  width: 100%;
+  margin-top:20px;
+  margin-left: 10px;
+  display: flex;
 }
 .row img{
   width: 200px;
   height: 200px;
-  justify-content: flex-start;
+}
+.my{
+  text-align: center;
+  width: 200px;
+  height: 250px;
+  margin-right: 30px;
+}
+.my.music img:hover{
+  opacity: 0.3;
 }
 
-
+.recent.creato,
+.recent.artisti{
+  margin-top: 10px;
+}
+/* creato */
+.my.daily img:hover{
+  opacity: 0.3;
+}
+/* artisti */
+.my.artisti img{
+  border-radius: 50%;
+}
+.my.artisti img:hover{
+  opacity: 0.3;
+}
 /* SEZIONE RIPRODUZIONE */
 
 .riproduzione{
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   background-color: rgb(102, 102, 102);
   height: 90px ;
   width: 100%;
   position: absolute;
   z-index: 900;
   bottom: 0;
+  padding: 0 16px;
+  color: white;
+}
+
+
+.now{
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.now img{
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.now .titolo{
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+.play{
+  width: 500px;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.plai{
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+}
+.barra{
+  width: 100px;
+  height: 0px;
+  border:3px solid black;
+  position: relative;
+}
+.barraverde{
+  position: absolute;
+  width: 50px;
+  background-color: green;
+  height: 6px;
+  bottom: -3px;
+  left:-3px;
+}
+.barra.play{
+  position: relative;
+  width: 500px;
+  height: 0px;
+  border:3px solid black;
+}
+.barra.play .barraverde{
+  width: 200px;
+}
+
+.vol{
+  width: 200px;
+  height: 90px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.vol i{
+  margin-right: 15px;
 }
